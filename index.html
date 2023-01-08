@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/menu/menu.css">
     <title>AluraGeek</title>
 </head>
 <body>
-    
+    <header class="menu container">
+        <h1 class="menu__logo">
+            <a href="./index.html">
+                <img src="./assets/img/menu/logo.svg" alt="Logo AluraGeek">
+            </a>
+        </h1>
+        <section class="menu__search">
+            <div class="menu__search__input">
+                <input class="menu__search__input__inputSearch" type="text" placeholder="¿Qué deseas buscar?">
+                <img class="menu__search__input__btnSearch" src="./assets/img/menu/lupa.png" alt="Buscar">
+                <img class="menu__search__input__btnClose" src="./assets/img/menu/equis.png" alt="Cerrar">
+            </div>
+            <div class="menu__search__result">
+                <p class="menu__search__result__message">Prueba</p>
+            </div>
+        </section>
+        <a class="menu__btnLogin" href="./screens/login.html"><button>Login</button></a>
+    </header>
 </body>
 </html>
