@@ -1,0 +1,95 @@
+.banner {
+    height: 400px;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%), url('../img/banner/banner.jpg') no-repeat center / cover;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 375px;
+}
+
+.banner__title {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 61px;
+
+    color: #FFFFFF;
+}
+
+.banner__caption {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #FFFFFF;
+
+    margin: 1rem 0;
+}
+
+.banner__btnAllConsoles button {
+    width: 130px;
+    height: 50px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+    border: none;
+
+    background: #2A7AE4;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 350px;
+    }
+
+    .banner-container {
+        height: 325px;
+    }
+
+    .banner__btnAllConsoles button{
+        width: 120px;
+        height: 40px;
+
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        height: 200px;
+    }
+    
+    .banner-container {
+        height: 175px;
+    }
+    
+    .banner__title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    
+    .banner__caption {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        
+        margin: .5rem 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .banner__caption {
+        font-size: 13px;
+        line-height: 15px;
+    }
+}
