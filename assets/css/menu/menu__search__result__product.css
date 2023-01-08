@@ -3,7 +3,7 @@
     align-items: center;
     gap: 10px;
 
-    margin: 2rem
+    margin: 1rem 2rem;
 }
 
 .menu__search__result__product__image {
@@ -40,4 +40,20 @@
 
 .menu__search__result__product__view a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+    .menu__search__result__product {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu__search__result__product {
+        width: calc((100vw - 4rem) / 2);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

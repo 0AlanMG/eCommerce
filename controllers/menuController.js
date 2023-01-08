@@ -7,13 +7,30 @@ const searchResult = document.querySelector('.menu__search__result');
 
 searchInputSearch.value = '';
 
+window.addEventListener('resize', () => {
+    if(window.innerWidth > 500){
+        searchInputSearch.style.display = 'block';
+        searchInputBtnSearch.style.display = 'block';
+        searchInputBtnClose.style.display = 'none';
+    }else if(window.innerWidth <= 500) {
+        hideSearchMobile();
+    }
+});
+
 document.querySelectorAll('body >*:not(header)').forEach(element => {
     element.addEventListener('click', () => searchResult.style.display = 'none')
 });
 
 searchInputSearch.addEventListener('focus', () => showSearchResult(searchInputSearch.value));
 searchInputSearch.addEventListener('input', () => showSearchResult(searchInputSearch.value));
-searchInputBtnSearch.addEventListener('click', () => showSearchResult(searchInputSearch.value));
+searchInputBtnSearch.addEventListener('click', () => {
+    showSearchResult(searchInputSearch.value);
+
+    if(window.innerWidth <= 500){
+        showSearchMobile();
+    }
+});
+searchInputBtnClose.addEventListener('click', () => hideSearchMobile());
 
 const showSearchResult = async (productName) => {
     try {
@@ -33,12 +50,27 @@ const showSearchResult = async (productName) => {
                     divProduct.innerHTML = showProduct(product);
                     searchResult.appendChild(divProduct);
                 });
-                searchResult.style.display = 'block';
+                searchResult.style.display = 'flex';
             }
         }
     } catch (error) {
         showErrorMessage('Error al buscar productos, por favor intente más tarde.');        
     }
+};
+
+const showSearchMobile = () => {
+    searchInputBtnSearch.style.display = 'none';
+
+    searchInputSearch.style.display = 'block';
+    searchInputBtnClose.style.display = 'block';
+};
+
+const hideSearchMobile = () => {
+    searchInputSearch.style.display = 'none';
+    searchResult.style.display = 'none';
+    searchInputBtnClose.style.display = 'none';
+
+    searchInputBtnSearch.style.display = 'block';
 };
 
 const showErrorMessage = (message) => {
@@ -47,7 +79,7 @@ const showErrorMessage = (message) => {
         pErrorResult.classList.add('menu__search__result__message');
         pErrorResult.innerText = message;
         searchResult.appendChild(pErrorResult);
-        searchResult.style.display = 'block';
+        searchResult.style.display = 'flex';
     }
 };
 

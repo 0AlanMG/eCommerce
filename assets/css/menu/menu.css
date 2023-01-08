@@ -57,6 +57,9 @@
 }
 
 .menu__search__result {
+    display: flex;
+    flex-direction: column;
+
     width: calc(25vw + 1rem);
     max-height: 800px;
     
@@ -182,7 +185,9 @@
     }
 
     .menu__search__result {
-        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
 
         width: calc(100vw - 2rem);
 
