@@ -15,8 +15,6 @@
     margin-left: 3rem;
     margin-right: auto;
 
-    border-radius: 15px;
-
     background: #EAEAEA;
 }
 
@@ -59,8 +57,6 @@
 }
 
 .menu__search__result {
-    display: none;
-
     width: calc(25vw + 1rem);
     max-height: 800px;
     
