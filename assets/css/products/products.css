@@ -1,0 +1,117 @@
+.products {
+    margin-top: 3rem;
+}
+
+.products__section {
+    margin-bottom: 4rem;
+}
+
+.products__section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1rem;
+}
+
+.products__section__header__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #464646;
+}
+
+.products__section__header__btnAllProducts {
+    display: flex;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #2A7AE4;
+
+    text-decoration: none;
+}
+
+.products__section__header__btnAllProducts img {
+    margin-left: .5rem;
+}
+
+.products__section__productsList-starwars, .products__section__productsList-consolas, .products__section__productsList-diversos {
+    display: grid;
+    grid-template-columns: repeat(6, calc((100vw - 23.15rem) / 6));
+    gap: 1rem;
+}
+
+.products__section__productsList__errorMesage {
+    grid-column: 1/7;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    text-align: center;
+
+    margin: 2rem 0;
+}
+
+@media screen  and (max-width: 1200px) {
+    .products__section__productsList-starwars, .products__section__productsList-consolas, .products__section__productsList-diversos {
+        grid-template-columns: repeat(6, calc((100vw - 17.15rem) / 6));
+    }
+}
+
+@media screen  and (max-width: 900px) {
+    .products__section__productsList-starwars, .products__section__productsList-consolas, .products__section__productsList-diversos {
+        grid-template-columns: repeat(4, calc((100vw - 11.15rem) / 4));
+        gap: 1.68rem;
+    }
+
+    .products__section__productsList__errorMesage {
+        grid-column: 1/5;
+    }
+}
+
+@media screen  and (max-width: 768px) {
+    .products__section__header__title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .products__section__productsList-starwars, .products__section__productsList-consolas, .products__section__productsList-diversos {
+        grid-template-columns: repeat(4, calc((100vw - 9.15rem) / 4));
+    }
+
+    .products__section__productsList__errorMesage {
+        font-size: 14px;
+        line-height: 16px;
+
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .products__section__header__btnAllProducts {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .products__section__productsList-starwars, .products__section__productsList-consolas, .products__section__productsList-diversos {
+        grid-template-columns: repeat(3, calc((100vw - 5.55rem) / 3));
+    }
+
+    .products__section__productsList__errorMesage {
+        grid-column: 1/4;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .products__section__productsList-starwars, .products__section__productsList-consolas, .products__section__productsList-diversos {
+        grid-template-columns: repeat(2, calc((100vw - 3.85rem) / 2));
+    }
+
+    .products__section__productsList__errorMesage {
+        grid-column: 1/3;
+    }
+}

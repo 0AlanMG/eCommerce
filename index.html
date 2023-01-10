@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./assets/css/menu/menu.css">
     <link rel="stylesheet" href="./assets/css/menu/menu__search__result__product.css">
     <link rel="stylesheet" href="./assets/css/banner.css">
+    <link rel="stylesheet" href="./assets/css/products/products.css">
+    <link rel="stylesheet" href="./assets/css/products/product.css">
     <title>AluraGeek</title>
 </head>
 <body>
@@ -39,8 +41,47 @@
                 <a class="banner__btnAllConsoles" href="#consoles"><button>Ver Consolas</button></a>
             </div>
         </section>
+
+        <section class="products container">
+            <div class="products__section">
+                <div class="products__section__header">
+                    <h2 class="products__section__header__title">Star Wars</h2>
+                    <a class="products__section__header__btnAllProducts" href="./screens/allproductsbycategory.html?category='Star Wars'">
+                        Ver todo
+                        <img src="./assets/img/products/header/flecha_derecha.png" alt="Flecha Ver Todo">
+                    </a>
+                </div>
+
+                <div class="products__section__productsList-starwars"></div>
+            </div>
+
+            <div class="products__section">
+                <div class="products__section__header">
+                    <h2 class="products__section__header__title">Consolas</h2>
+                    <a class="products__section__header__btnAllProducts" href="./screens/allproductsbycategory.html?category='Consolas'">
+                        Ver todo
+                        <img src="./assets/img/products/header/flecha_derecha.png" alt="Flecha Ver Todo">
+                    </a>
+                </div>
+
+                <div class="products__section__productsList-consolas"></div>
+            </div>
+
+            <div class="products__section">
+                <div class="products__section__header">
+                    <h2 class="products__section__header__title">Diversos</h2>
+                    <a class="products__section__header__btnAllProducts" href="./screens/allproductsbycategory.html?category='Diversos'">
+                        Ver todo
+                        <img src="./assets/img/products/header/flecha_derecha.png" alt="Flecha Ver Todo">
+                    </a>
+                </div>
+
+                <div class="products__section__productsList-diversos"></div>
+            </div>
+        </section>
     </main>
 
     <script type="module" src="./controllers/menuController.js"></script>
+    <script type="module" src="./controllers/indexController.js"></script>
 </body>
 </html>
